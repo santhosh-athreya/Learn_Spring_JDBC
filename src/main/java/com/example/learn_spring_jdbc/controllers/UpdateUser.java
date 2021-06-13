@@ -11,14 +11,14 @@ import com.example.learn_spring_jdbc.DTOs.User;
 @RestController
 public class UpdateUser {
 
-	@Autowired
-	private JDBC_Repo repo;
+	 @Autowired
+	 private JDBC_Repo jdbc;
 	
 	@PostMapping("/EditUser")
 	public String updateUser(@RequestBody User user) {
 		
 		
-		return repo.updateUser(user);
+		return jdbc.updateUser(user);
 		
 		
 	}

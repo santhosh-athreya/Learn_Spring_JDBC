@@ -11,14 +11,14 @@ import com.example.learn_spring_jdbc.DTOs.User;
 @RestController
 public class FindUser {
 
-	@Autowired
-	private JDBC_Repo jdbc_repo;
+	 @Autowired
+	 private JDBC_Repo jdbc;
 
 	
 	@GetMapping("/User")
 	public User getUserById(@RequestParam(name="id") int id)
 	{
-		return jdbc_repo.getSingleUser(id);
+		return jdbc.getSingleUser(id);
 		
 	}
 

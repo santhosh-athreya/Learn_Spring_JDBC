@@ -11,13 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class Insert_New_User {
 
 
-    private JDBC_Repo jdbc;
-
     @Autowired
-    public Insert_New_User(JDBC_Repo jdbc)
-    {
-        this.jdbc = jdbc;
-    }
+    private JDBC_Repo jdbc;
 
     @PostMapping("/save")
     public String insert(@RequestBody User user)

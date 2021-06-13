@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.learn_spring_jdbc.DAO.JDBC_Repo;
+import com.example.learn_spring_jdbc.DAO.JDBC_Repo_Impl;
 
 @RestController
 public class DeleteUser {
 
 	
-	@Autowired
-	private JDBC_Repo jdbc; 
+	 @Autowired
+	 private JDBC_Repo jdbc;
 	
 	@DeleteMapping("/removeUser")
 	public String deleteUserById(@RequestParam(name="id") int id)

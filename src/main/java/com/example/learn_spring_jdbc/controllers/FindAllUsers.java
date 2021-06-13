@@ -12,18 +12,13 @@ import java.util.List;
 public class FindAllUsers {
 
 
-    private JDBC_Repo jdbcRepo;
-
-
-    public  FindAllUsers(JDBC_Repo jdbcRepo)
-    {
-        this.jdbcRepo = jdbcRepo;
-    }
+	 @Autowired
+	 private JDBC_Repo jdbc;
 
     @GetMapping("/Users")
     public List<User> findUsers()
     {
-       return jdbcRepo.getUsers();
+       return jdbc.getUsers();
 
     }
 }
